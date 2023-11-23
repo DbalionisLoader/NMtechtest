@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Conturium Garages | Build a garage in Yorkshire</title>
+    <!--  External styles -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+     <!-- Local styles -->
     <link href="style.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body>
-    <header>
+<body>
+    <header class="container header">
+        <div class="container  row p-0 m-0">
+            
+            <div class="col-3 logo p-0">
+                <a href="#"><img src="../images/Logo.svg" alt=""></a>
+            </div>
+            
+            <div class="col-6 nav-menu-list p-0 ">
+                <ul class="menu-items p-0 m-0">
+                <li><a href="#" class="menu-item">Garages</a></li>
+                <li><a href="#" class="menu-item">Repairs</a></li>
+                <li><a href="#" class="menu-item">Manufacturing</a></li>
+                <li><a href="#" class="menu-item">Blog</a></li>
+                <li><a href="#" class="menu-item">Contact Us</a></li>
+                </ul>
+            </div>
+           
+              <!--  <div class="search-bar"> -->
+                <div class="col-2 search-box-wrap d-flex flex-row align-items-center m-4 border-0 ">
+   
+                    <input type="text" class="form-control search-field border-0" placeholder="Search"> 
+                    <span class="search-icon fa-solid fa-magnifying-glass"></span>
+                </div>
+         </div>
+    
+            <div class="col-1 header-icons d-flex align-items-center justify-content-end p-0">
+              <!--      <div class="header-widget-wrap ">  -->
+                  <div class="widget-box ">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div> 
+                  <div class="widget-box">
+                    <i class="fa-solid fa-sterling-sign"></i>
+                  </div>  
+                  <div class="widget-box">
+                    <i class="fa-solid fa-phone fa-rotate-270"></i>
+                    <div class="col-2 header-icons d-flex">
+                        <!--   </div>  -->
+                </div>   
+            </div>
+
+        </div>
     </header>
-    <hr class="m-0 p-0 border-line" />
+    <section class="container hero-wrap d-flex align-items-center justify-content-start p-0">
+        <div class="hero-section-box d-flex flex-column ">
+            <h1>Complete end to end base laying & garage solution</h1>
+            <h5>Concrete & Prefab Garages for over 70 years</h5>
+            <div class="decorative-line-box d-flex">
+                <span class="line-section red"></span>
+                <span class="line-section gray"></span>
+                <span class="line-section gray"></span>
+            </div>
+        </div>
+    </section>    
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -32,6 +81,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://kit.fontawesome.com/aeb574fe20.js" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

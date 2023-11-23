@@ -1,9 +1,12 @@
+/* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Custom Variables */
 :root{
 
     /* Layout sizes */
     --container-1440-size: 1440px;
+
     /* Colours */
     --main-background-colour: #FFFFFF;
     --secondary-background-colour: #F4F4F4;
@@ -12,6 +15,7 @@
     --search-bar-bg-colour: #EAEAEA;
     /* Unknown use */
     --shado-colour: #00000029;
+    
     /* Icon colours */
     --nav-bar-icon-colour: #000000;
     --side-bar-social-colour: #2A2A2A;
@@ -19,7 +23,8 @@
     /* Font colours */
     --main-font-colour: #3D3D3F;
     --footer-link-colour: #767676;
-    --footer-header-colour: #FFFFFF;
+    --header-White-colour: #FFFFFF;
+    
     /* Font-sizes */
     --h1-font-size: 40px;
     --h2-font-size: 32px;
@@ -30,6 +35,160 @@
     
 }
 
-body{
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* *** HEADER SECTION START *** */
+
+.container{
+    max-width:1440px !important;
+}
+
+.header {
+    max-width: 1440px;
+    position: relative;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    padding-left: 97px;
+    padding-right: 97px;
+    justify-content: space-between;
+}
+
+.header-wrap{
+    height: 89px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    margin-top: 14px;
+    /* other styles */
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--main-font-colour);
+    font-size: var(--p-font-size);
+    font-weight: 700;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100%;
+    padding: 0;
+}
+
+.search-box-wrap, .header-icons {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* other styles */
+}
+
+.menu-items li a {
+    padding: 0.5em 1em;
+    /* add transition here */
+}
+
+.menu-items li a:hover {
+    color: red;
+}
+
+.search-box-wrap {
+    position: relative;
+}
+/* ** Search box ** */
+.search-field{
+    background-color: var(--search-bar-bg-colour) ;
+    border-radius: 55px;
+    width: 216px;
+    height: 32px;
+}
+
+.search-icon{
+    position: absolute;
+    right: -16px; 
+    color: var(--main-font-colour);
+    margin-bottom: 4px;    
+    width: 13.5px;
+    height: 13.5px;
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+/* ** Widget icons ** */
+.widget-box:not(:last-child) {
+    margin-right: 28px; 
+  }
+
+
+/* Hero section */
+
+.hero-wrap{
+    position: relative;
+/*  hero section background image */
+    width: 100%; 
+    /* Height on the section -  */
+    height: 373px; 
+    background-image: url('../images/Hero Image.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.hero-wrap::before{
+    content: '';
+    position: absolute; 
+    /* The offset is all 0 to cover the full container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Opacity must be 41% */
+    background-color: rgba(0, 0, 0, 0.41); 
+    z-index: 1; 
+}
+
+.hero-section-box, .decorative-line-box{
+    text-align: left;
+    z-index: 2;
+}
+
+.hero-section-box h1, h5{
+    color: var(--header-White-colour);
+}
+
+/* ** Decorative hero section line ** */
+    
+    /* Individual line segment width and position*/
+  .line-section {
+    width: 60px; 
+    height: 8px;
+    display: inline-block;
+  }
+  
+  /* Gap between sections - except third line-section class */
+  .line-section:not(:last-child) {
+    margin-right: 4px; 
+  }
+  /* Line section colours */
+  .red {
+    background-color: var(--primary-accent-colour);
+  }
+  
+  .gray {
+    background-color: #9c9a98;
+  }
+
+  
