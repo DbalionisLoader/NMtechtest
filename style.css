@@ -45,12 +45,45 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* *** HEADER SECTION START *** */
+/* *** UTILITY CLASSES *** */
 
 .container{
     max-width:1440px !important;
 }
 
+.inner-container{
+    max-width: 1252px;
+    margin: 0 auto;
+}
+
+.section-spacing-70{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* ** Reusable text classes ** */
+.h2-accent-red {
+    font-size: var(--h2-font-size);
+    color: var(--primary-accent-colour);
+    font-weight: bold;
+    letter-spacing: 0.64px;
+}
+
+.h3-header-black {
+    font-size: var(--h3-font-size);
+    color: var(--main-font-colour);
+    font-weight: bold;
+    letter-spacing: 0.56px;
+}
+
+.p-content-grey {
+    font-size: var(--p-font-size);
+    color: var(--main-font-colour);
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
+
+/* *** HEADER SECTION START *** */
 .header {
     max-width: 1440px;
     position: relative;
@@ -192,3 +225,89 @@ body {
   }
 
   
+/* *** GARAGE ICON SECTION *** */
+
+.inner-container-1316{
+    max-width: 1316px;
+    margin: 0 auto;
+}
+
+
+
+.icon-row .icon-col {
+    flex: 0 0 auto; /* Override Bootstrap's flex properties */
+    width: 188px; /* Set column width to 188px */
+    position: relative;
+}
+
+.garage-widget-box {
+    width: 188px;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Aligns content to the bottom */
+    position: relative;
+  /*   background-color: var(--main-font-colour); */
+
+}
+
+.widget-content {
+    text-align: center; 
+    margin-bottom: 34px; /* adjust the height of icon box from the bottom */
+}
+
+.widget-content p {
+    font-size: var(--p-font-size);
+    color: var(--main-font-colour);
+    font-weight: bold;
+    letter-spacing: 0.32px;
+    margin-top: 14px;
+}
+
+.hover-icon {
+    width: 28px;
+    height: 32px;
+    font-size: 20px; /* Adjust the size of the > icon */
+    /* Background */
+    background-color: #BED0D4; 
+    border-top-left-radius: 5px;  
+    border-top-right-radius: 5px; 
+    /* Positioning on icon */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);  
+    align-items: center;
+    justify-content: center;
+     /* Hide by default */
+    display: none;
+   
+   
+}
+
+.garage-widget-box:hover {
+   box-shadow: 0px 3px 20px #0000001A;
+}
+
+/* Trigger  */
+.garage-widget-box:hover .hover-icon {
+    display: flex;
+}
+
+/* *** LATEST PROJECT SECTION *** */
+
+.bg-grey{
+    background-color: var(--secondary-background-colour);
+}
+
+.project-header-box{
+
+}
+
+/* Todo
+1. finish mobile header
+2. align hero section text to with header
+3. fix hero text wrap size
+4. fix hero text spacing between elements
+5. change the garage > icon to font awesome */
