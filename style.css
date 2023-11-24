@@ -350,28 +350,40 @@ body {
     margin: 0 auto;
 }
 
+.card {
+    max-width: 404px;
+}
 
+.card-body{
+    padding-left: 37px;
+    padding-right: 37px;    
+    padding-top: 43px;
+}
+
+/* Responsive card padding and margin classes  */
 @media (max-width: 760px) {
     
     .card-wrap:first-child {
     margin-bottom: 27px;
     }
+
     .card-wrap{
     padding-left: 37px;
     padding-right: 37px;
+    }
+
+    .card-body{
+    padding-left: 28.5px;
+    padding-right: 28.5px;    
+    padding-top: 39.5px;
 }
 
 
 }
 
+/* ** Card image hover zoom effect ** */
 
-.card {
-    max-width: 404px;
-}
-
-/* Card image hover zoom effect */
-
-/* Need wrapper to ensure the scale effect does not overlap outside
+/* Need a image wrapper to ensure the scale effect does not overlap outside
 and on top card body section */
 .image-wrapper {
     overflow: hidden; 
@@ -379,9 +391,7 @@ and on top card body section */
 }
 
 .card-img-top {
-    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
-    /* display: block; /* Ensures the image takes up the full width of its container 
-    width: 100%;  Makes sure the image is responsive */ 
+    transition: transform 0.3s ease;
 }
 
 /* Zoom-in effect when hovering over the card */
@@ -390,7 +400,8 @@ and on top card body section */
 }
 
 
-/* Card link and link hover dropdown and transform effect */
+/* ** Card link and link hover dropdown and transform effect ** */
+
 .card-body a{
     text-decoration: none;
     color: var(--primary-accent-colour);
@@ -399,27 +410,30 @@ and on top card body section */
 }
 
 .card-link a span {
-
     position: relative;
 }
 
+/* Combine a span drop down and expand effect to create the required final effect */
 .card-body a span::after {
     content: '';
+    /* Adjust size of the line here */
     height: 3px;
     background-color: var(--primary-accent-colour);
     border-radius: 5px;
+    /* Adjust postion of the span line here */
     position: absolute;
-    bottom: -8px; /* Initial position above the final location */
+    bottom: -8px; 
     left: 0;
-    width: 0; /* Start with no width */
-    transform: translateY(-8px); /* Start above its final position */
-    transition: width 0.3s ease, transform 0.3s ease; /* Transitions for width and transform */
+    width: 0; /* Start with width 0 and expand to 100% over 0.3 at same time
+    transform the line (move) from -8px (below the link) to  final position */
+    transform: translateY(-8px); 
+    transition: width 0.3s ease, transform 0.3s ease;
 }
 
 /* selector to add hover to only link = .card-body a:hover span::after */
 .card-body:hover a span::after {
-    width: 100%; /* Full width on hover */
-    transform: translateY(0px); /* Move to final position */
+    width: 100%; 
+    transform: translateY(0px); 
 }
 
 
