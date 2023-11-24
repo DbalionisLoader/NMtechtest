@@ -61,6 +61,10 @@ body {
     padding-bottom: 70px;
 }
 
+.section-pb-spacing{
+    padding-bottom: 68px;
+}
+
 /* ** Reusable text classes ** */
 .h2-accent-red {
     font-size: var(--h2-font-size);
@@ -69,8 +73,22 @@ body {
     letter-spacing: 0.64px;
 }
 
+.h2-header-black {
+    font-size: var(--h2-font-size);
+    color: var(--main-font-colour);
+    font-weight: bold;
+    letter-spacing: 0.64px;
+}
+
 .h3-header-black {
     font-size: var(--h3-font-size);
+    color: var(--side-bar-social-colour);
+    font-weight: bold;
+    letter-spacing: 0.48px;
+}
+
+.h4-header-black{
+    font-size: var(--h4-font-size);
     color: var(--main-font-colour);
     font-weight: bold;
     letter-spacing: 0.56px;
@@ -302,8 +320,108 @@ body {
 }
 
 .project-header-box{
+    padding-top: 68px;
+    margin-bottom: 68px;
+}
+
+.view-more-button{
+    color: var(--header-White-colour);  
+    font-size: var(--p-font-size);
+    letter-spacing: 0.32px;
+    background-color: var(--primary-accent-colour);
+    width: 131px;
+    height: 32px; 
+    border: none;
+    border-radius: 200px;
+    
+    /* Transition effects */
+    transition: background-color 0.3s ease, width 0.3s ease; 
 
 }
+
+.view-more-button:hover {
+    background-color: #A72E25;
+    width: 166px;
+ 
+}
+
+.project-card-container{
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 760px) {
+    
+    .card-wrap:first-child {
+    margin-bottom: 27px;
+    }
+    .card-wrap{
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+
+}
+
+
+.card {
+    max-width: 404px;
+}
+
+/* Card image hover zoom effect */
+
+/* Need wrapper to ensure the scale effect does not overlap outside
+and on top card body section */
+.image-wrapper {
+    overflow: hidden; 
+    width: 100%; 
+}
+
+.card-img-top {
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+    /* display: block; /* Ensures the image takes up the full width of its container 
+    width: 100%;  Makes sure the image is responsive */ 
+}
+
+/* Zoom-in effect when hovering over the card */
+.card:hover .card-img-top {
+    transform: scale(1.10); 
+}
+
+
+/* Card link and link hover dropdown and transform effect */
+.card-body a{
+    text-decoration: none;
+    color: var(--primary-accent-colour);
+    position: relative;
+    display: inline-block;
+}
+
+.card-link a span {
+
+    position: relative;
+}
+
+.card-body a span::after {
+    content: '';
+    height: 3px;
+    background-color: var(--primary-accent-colour);
+    border-radius: 5px;
+    position: absolute;
+    bottom: -8px; /* Initial position above the final location */
+    left: 0;
+    width: 0; /* Start with no width */
+    transform: translateY(-8px); /* Start above its final position */
+    transition: width 0.3s ease, transform 0.3s ease; /* Transitions for width and transform */
+}
+
+/* selector to add hover to only link = .card-body a:hover span::after */
+.card-body:hover a span::after {
+    width: 100%; /* Full width on hover */
+    transform: translateY(0px); /* Move to final position */
+}
+
 
 /* Todo
 1. finish mobile header
