@@ -436,10 +436,16 @@ and on top card body section */
     transform: translateY(0px); 
 }
 
+/* *** FOOTER SECTION *** */
+.bg-footer{
+    background-color:var(--side-bar-social-colour) ;
+}
+
 
 /* Todo
 1. finish mobile header
 2. align hero section text to with header
 3. fix hero text wrap size
 4. fix hero text spacing between elements
-5. change the garage > icon to font awesome */
+5. change the garage > icon to font awesome
+6. add sticky sidbar socials */
