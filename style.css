@@ -11,8 +11,9 @@
     --main-background-colour: #FFFFFF;
     --secondary-background-colour: #F4F4F4;
     --primary-accent-colour:#D44035;
-    --footer-underline-colour: #707070;
+    --footer-underline-colour: rgba(112, 112, 112, 0.28);
     --search-bar-bg-colour: #EAEAEA;
+    --mobile-menu-bg-colour:  #2A2A2A;
     /* Unknown use */
     --shado-colour: #00000029;
     
@@ -24,6 +25,7 @@
     --main-font-colour: #3D3D3F;
     --footer-link-colour: #767676;
     --header-White-colour: #FFFFFF;
+    
     
     /* Font-sizes */
     --h1-font-size: 40px;
@@ -101,6 +103,170 @@ body {
     letter-spacing: 0.32px;
 }
 
+/* *** MOBILE HEADER NAV START *** */
+
+.mobile-nav{
+    display: none;
+}
+
+.mobile-nav {
+    justify-content: space-between;
+    align-items: center; 
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    user-select: none;
+
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav-icon {
+    background-color: grey;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    /* Positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon background colours */
+.mobile-search-icon{
+    background-color: #DDDBDB;
+    cursor: pointer;
+   
+}
+
+.mobile-search-icon i{
+    color: var(--main-font-colour); 
+    
+}
+
+.menu-icon{
+    background-color: var(--primary-accent-colour);
+    cursor: pointer;
+}
+
+/* Logo size control */
+.mobile-logo{
+    max-width: 154px;
+    max-height: 38px;
+}
+
+
+.hamburger span {
+    display: block;
+    width: 18.8px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  
+}
+
+/* HamMenu toogle class */
+.hamburger .change-ham-color {
+    background-color: var(--primary-accent-colour);
+}
+
+.mobile-nav-background {
+    background-color: var(--mobile-menu-bg-colour);
+}
+
+
+/* *  MOBILE MENU STYLE * */
+.mobile-menu {
+    position: fixed;
+    /* Menu position */
+    top: 125px; 
+    left: 0;
+    width: 100%;
+    /* ADjust overall menu height here */
+    height: auto;
+    background-color:var(--mobile-menu-bg-colour);
+   /* Instead of display: none; - cause transition effect not to work */
+    visibility: hidden; 
+    opacity: 0; 
+    /* Control the menu ease in effect */
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    overflow-y: auto;
+   /* Need to make smooth menu close effect*/ 
+    transform: translateY(0); 
+    z-index: 1000; 
+}
+
+/* Mobile menu icons */
+
+
+.mobile-icon-box a {
+    color: var(--header-White-colour);
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.mobile-icon-box a:not(:last-child) {
+    margin-right: 60px; 
+  }
+
+/* Mobile menu list  */
+/* Need to refactor ul and li style as css duplicated in footer */  
+.mobile-menu ul{
+    list-style: none;
+    color: var(--footer-link-colour);
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: var(--header-White-colour);
+    size: var(--p-font-size);
+    font-weight: bold;
+    letter-spacing: 0.32px;
+
+}
+
+.mobile-menu li{
+    border-bottom: 3px solid var(--footer-underline-colour); 
+    padding: 16px 0; 
+}
+
+/* Menu contact details */
+ 
+.contact-details{
+    margin-top: 70px;
+    padding-bottom: 127px;
+}
+
+.contact-details a {
+    text-decoration: none;
+}
+
+.menu-social-box a{
+    color: var(--header-White-colour);
+    font-size: 28px;
+ 
+}
+
+.menu-social-box a:not(:last-child) {
+    margin-right: 19px; 
+  }
+
+
+.show-mobile-menu {
+    visibility: visible;  
+    opacity: 1;
+    transform: translateY(0);
+    /* Smooth close menu animation */
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+}
+
+/* *** MOBILE HEADER END *** */
+/* ------------------------------- */
 /* *** HEADER SECTION START *** */
 .header {
     max-width: 1440px;
@@ -122,7 +288,7 @@ body {
     align-items: center;
     height: 44px;
     margin-top: 14px;
-    /* other styles */
+   
 }
 
 .header a {
@@ -145,12 +311,12 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    /* other styles */
+  
 }
 
 .menu-items li a {
     padding: 0.5em 1em;
-    /* add transition here */
+
 }
 
 .menu-items li a:hover {
@@ -175,13 +341,34 @@ body {
     margin-bottom: 4px;    
     width: 13.5px;
     height: 13.5px;
-    top: 50%; 
-    transform: translateY(-50%); 
+    /* Center position if needed */
+    /*  top: 50%; 
+    transform: translateY(-50%);  */
 }
 /* ** Widget icons ** */
 .widget-box:not(:last-child) {
     margin-right: 28px; 
   }
+
+/* Responsive mobile header media */
+
+/* Hide desktop header at 1400px and show mobile menu */
+ @media (max-width: 1400px) {
+    .header {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+/* To hide the mobile menu if screen get resize back to desktop */
+ @media (min-width: 1400px) {
+  
+    .mobile-menu {
+        display: none;
+    }
+}  
 
 
 /* Hero section */
@@ -220,6 +407,31 @@ body {
     color: var(--header-White-colour);
 }
 
+.hero-section-box h1{
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+.hero-section-box h5{
+    font-size: var(--h5-font-size);
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+@media (max-width: 760px) {
+    .hero-section-box h1{
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 0.56px;
+    }
+
+    .hero-wrap{
+        height: 285px; 
+    }
+}
+
+
 /* ** Decorative hero section line ** */
     
     /* Individual line segment width and position*/
@@ -253,8 +465,9 @@ body {
 
 
 .icon-row .icon-col {
-    flex: 0 0 auto; /* Override Bootstrap's flex properties */
-    width: 188px; /* Set column width to 188px */
+    flex: 0 0 auto; 
+    /* Set the garage icon box size */
+    width: 188px;
     position: relative;
 }
 
@@ -264,15 +477,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Aligns content to the bottom */
+    justify-content: flex-end; 
     position: relative;
-  /*   background-color: var(--main-font-colour); */
+ 
 
 }
 
 .widget-content {
     text-align: center; 
-    margin-bottom: 34px; /* adjust the height of icon box from the bottom */
+    margin-bottom: 34px; 
 }
 
 .widget-content p {
@@ -286,7 +499,7 @@ body {
 .hover-icon {
     width: 28px;
     height: 32px;
-    font-size: 20px; /* Adjust the size of the > icon */
+    font-size: 20px; 
     /* Background */
     background-color: #BED0D4; 
     border-top-left-radius: 5px;  
@@ -438,14 +651,41 @@ and on top card body section */
 
 /* *** FOOTER SECTION *** */
 .bg-footer{
-    background-color:var(--side-bar-social-colour) ;
+    background-color:var(--side-bar-social-colour);
+    padding-top: 42.5px;
+    padding-bottom: 43px;
 }
 
+.footer-wrap h5{
+    font-size: var(--h5-font-size);
+    color: var(--header-White-colour);
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
 
+.footer-wrap ul{
+    list-style: none;
+    color: var(--footer-link-colour);
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-wrap li a {
+    text-decoration: none;
+    color: var(--footer-link-colour);
+}
+
+.footer-wrap li{
+    border-bottom: 1.5px solid var(--footer-underline-colour); 
+    padding: 5px 0;
+}
 /* Todo
 1. finish mobile header
 2. align hero section text to with header
 3. fix hero text wrap size
 4. fix hero text spacing between elements
 5. change the garage > icon to font awesome
-6. add sticky sidbar socials */
+6. add sticky sidbar socials
+7. fix here section font weight
+8. Fix hero section spacing between heading on desktop and mobile */

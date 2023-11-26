@@ -16,20 +16,70 @@
 </head>
 
 <body>
+    <!-- MOBILE NAV BAR  -->
+    <div class="container mobile-nav px-4">
+      <div class="mobile-nav-icon  mobile-search-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="mobile-nav-logo">
+        <a href="#"><img class="mobile-logo" src="../images/Logo.svg" alt="Contorium Garages company logo"></a>
+      </div>
+      <div class="mobile-nav-icon menu-icon">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- 
+      MOBILE POP IN MENU
+    -->
+    <div class="mobile-menu ">
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+      <div class="mobile-icon-box pt-4 pb-4 d-flex">
+        <a href="#"><i class="fa-solid fa-book-open"> </i></a>
+        <a href="#"><i class="fas fa-pound-sign"></i></a>
+        <a href="#"><i class="fa-solid fa-phone fa-rotate-270"></i></a>
+      </div>
+      <div class="container-fluid px-4">
+      <ul class="mobile-menu-list">
+        <li><a href="#">Garages</a></li>
+        <li><a href="#">Repairs</a></li>
+        <li><a href="#">Manufactoring</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      </div>
+      <div class="contact-details d-flex flex-column align-items-center">
+        <div class="menu-social-box d-flex mb-3"> 
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+          <a href="#">
+            <h5 class="mb-3">info@myemail.com</h5>
+          </a>
+          <h2 class="h2-accent-red">0123 456 789</h2>
+        </div>
+      </div>
+      </div>  <!-- Container end-->
+    <!-- MOBILE POP IN MENU END-->
+
     <header class="container header">
-        <div class="container  row p-0 m-0">
+        <div class="container row p-0 m-0">
             
             <div class="col-3 logo p-0">
-                <a href="#"><img src="../images/Logo.svg" alt=""></a>
+                <a href="#"><img src="../images/Logo.svg" alt="Contorium Garages company logo"></a>
             </div>
             
             <div class="col-6 nav-menu-list p-0 ">
-                <ul class="menu-items p-0 m-0">
+                <ul class="menu-items p-0 m-0 text-center">
                 <li><a href="#" class="menu-item">Garages</a></li>
                 <li><a href="#" class="menu-item">Repairs</a></li>
                 <li><a href="#" class="menu-item">Manufacturing</a></li>
                 <li><a href="#" class="menu-item">Blog</a></li>
-                <li><a href="#" class="menu-item">Contact Us</a></li>
+                <li><a href="#" class="menu-item ">Contact Us</a></li>
                 </ul>
             </div>
            
@@ -50,9 +100,9 @@
                     <i class="fa-solid fa-sterling-sign"></i>
                   </div>  
                   <div class="widget-box">
-                    <i class="fa-solid fa-phone fa-rotate-270"></i>
-                    <div class="col-2 header-icons d-flex">
-                        <!--   </div>  -->
+                    <i class="fa-solid fa-phone fa-rotate-270"></i> 
+                    <div class="col-2 header-icons d-flex">      <!-- CHECK THIS  -->     <!--  PROBLEM  -->    <!--   </div>  -->
+                    
                 </div>   
             </div>
 
@@ -61,16 +111,18 @@
     <!-- 
       HERO SECTION START
     -->
-    <section class="container hero-wrap d-flex align-items-center justify-content-start p-0">
-        <div class="hero-section-box d-flex flex-column ">
-            <h1>Complete end to end base laying & garage solution</h1>
-            <h5>Concrete & Prefab Garages for over 70 years</h5>
-            <div class="decorative-line-box d-flex">
+    <section class="container hero-wrap">
+      <div class="inner-container h-100 d-flex flex-column justify-content-center align-items-start ">   
+        <div class="hero-section-box px-4 px-md-0"> 
+        <h1>Complete end to end <br class="d-block d-md-none"> base <br class="d-none d-md-block"> laying & <br class="d-block d-md-none"> garage solution</h1>
+            <h5>Concrete & Prefab Garages <br class="d-block d-md-none"> for over 70 years</h5>
+              <div class="decorative-line-box mt-4 d-flex">
                 <span class="line-section red"></span>
                 <span class="line-section gray"></span>
                 <span class="line-section gray"></span>
-            </div>
-        </div>
+              </div>
+            </div>   
+      </div>  
     </section>    
     <!-- HERO SECTION END-->
     
@@ -94,9 +146,9 @@
     <!-- 
       GARAGE STYLE ICON SECTION START
     -->
-    <section class="container p-0">
+    <section class="container p-4 p-md-0">
       <div class="inner-container-1316">
-        <div class="row icon-row gx-0">
+        <div class="row icon-row gx-0 justify-content-start">
           <div class="col icon-col">    <!--  Icon box 1 -->
             <div class="garage-widget-box">
                 <div class="widget-content">
@@ -210,9 +262,9 @@
     <!-- 
       FOOTER START HERE
     -->
-    <footer class="container bg-footer ">
+    <footer class="container bg-footer">
       <div class="inner-container">
-        <div class="row">
+        <div class="row footer-wrap">
           <div class="col">
             <div class="social-box d-flex align-items-center">
 
@@ -222,19 +274,42 @@
               <h2 class="h2-accent-red">0123 456 789</h2>
             </div>
           </div>
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
+          <div class="col d-flex flex-column ">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="">Contact us</a></li>
+              <li><a href="">Location Covered</a></li>
+            </ul>
+          </div>
+          <div class="col d-flex flex-column">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="">Garages</a></li>
+              <li><a href="">Repairs</a></li>
+              <li><a href="">Manufacturing</a></li>
+            </ul>
+          </div>
+          <div class="col d-flex flex-column">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="">About us</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Meet The Team</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
+     <!-- FOOTER START END -->
     <!-- SCRIPT LAND -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
