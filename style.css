@@ -128,13 +128,17 @@ body {
 }
 
 .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     justify-content: space-between;
     align-items: center; 
     background-color: white;
     padding-top: 50px;
     padding-bottom: 30px;
     user-select: none;
-
+    z-index: 100;
     transition: background-color 0.3s ease;
 }
 
@@ -423,8 +427,16 @@ body {
     background-image: url('../images/Hero Image.jpeg'); 
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    transition: margin 0.3s ease;
 }
+
+@media (max-width: 1400px) {
+    .hero-wrap{
+        margin-top: 125px;
+    }
+}
+
 
 .hero-wrap::before{
     content: '';
