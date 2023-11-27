@@ -67,7 +67,19 @@ body {
     padding-bottom: 68px;
 }
 
-/* ** Reusable text classes ** */
+/* Responsive spacing utility */
+@media (max-width: 760px) {
+    .section-spacing-70{
+        padding-top: 29px;
+        padding-bottom: 0px;
+    }
+}
+
+
+
+
+/* ** REUSABLE UTILITY CLASSES ** */
+
 .h2-accent-red {
     font-size: var(--h2-font-size);
     color: var(--primary-accent-colour);
@@ -103,8 +115,14 @@ body {
     letter-spacing: 0.32px;
 }
 
-/* *** MOBILE HEADER NAV START *** */
+.p-content-white {
+    font-size: var(--p-font-size);
+    color: var(--header-White-colour);
+    font-weight: 400;
+    letter-spacing: 0.32px;
+}
 
+/* *** MOBILE HEADER NAV START *** */
 .mobile-nav{
     display: none;
 }
@@ -175,7 +193,7 @@ body {
 }
 
 
-/* *  MOBILE MENU STYLE * */
+/* ***  MOBILE MENU STYLE *** */
 .mobile-menu {
     position: fixed;
     /* Menu position */
@@ -197,9 +215,7 @@ body {
     z-index: 1000; 
 }
 
-/* Mobile menu icons */
-
-
+/* * MOBILE MENU ICONS * */
 .mobile-icon-box a {
     color: var(--header-White-colour);
     font-size: 28px;
@@ -210,7 +226,7 @@ body {
     margin-right: 60px; 
   }
 
-/* Mobile menu list  */
+/* * MOBILE MENU UL/LI LIST * */
 /* Need to refactor ul and li style as css duplicated in footer */  
 .mobile-menu ul{
     list-style: none;
@@ -235,8 +251,7 @@ body {
     padding: 16px 0; 
 }
 
-/* Menu contact details */
- 
+/* * MENU CONTACT DETAILS */
 .contact-details{
     margin-top: 70px;
     padding-bottom: 127px;
@@ -370,8 +385,34 @@ body {
     }
 }  
 
+/* ** STICKY SOCIALS ICONS SIDEBAR ** */
 
-/* Hero section */
+/* Positioning work on desktop, but need a different method for responsive views */
+.social-sidebar {
+    position: fixed; 
+    /* Position from top tof the page */
+    top: 700px; 
+    /* Position from left and calc to adjust to a container size of 1440px */
+    left: calc(50% - 720px + 40px);
+    /* Ensure icons above other content */
+    z-index: 3;
+}
+
+.side-social-icon {
+    display: block;
+    color: var(--side-bar-social-colour);
+    font-size: 19px;
+}
+
+/* Adjust margin between icons */
+.social-sidebar a:not(:last-child) {
+    margin-bottom: 8px; 
+  }
+
+
+
+
+/* ** HERO SECTION ** */
 
 .hero-wrap{
     position: relative;
@@ -499,7 +540,7 @@ body {
 .hover-icon {
     width: 28px;
     height: 32px;
-    font-size: 20px; 
+    font-size: 12px; 
     /* Background */
     background-color: #BED0D4; 
     border-top-left-radius: 5px;  
@@ -594,11 +635,12 @@ body {
 
 }
 
-/* ** Card image hover zoom effect ** */
+/* * CARD ZOOM EFFECT * */
 
-/* Need a image wrapper to ensure the scale effect does not overlap outside
-and on top card body section */
+
 .image-wrapper {
+    /* Need a image wrapper to ensure the scale effect does not overlap outside
+    and on top card body section */
     overflow: hidden; 
     width: 100%; 
 }
@@ -613,8 +655,7 @@ and on top card body section */
 }
 
 
-/* ** Card link and link hover dropdown and transform effect ** */
-
+/* * CARD LINK HOVER - combined dropdown and transform (expand) effect * */
 .card-body a{
     text-decoration: none;
     color: var(--primary-accent-colour);
@@ -626,6 +667,7 @@ and on top card body section */
     position: relative;
 }
 
+/* Card Link hover animation */
 /* Combine a span drop down and expand effect to create the required final effect */
 .card-body a span::after {
     content: '';
@@ -637,7 +679,8 @@ and on top card body section */
     position: absolute;
     bottom: -8px; 
     left: 0;
-    width: 0; /* Start with width 0 and expand to 100% over 0.3 at same time
+    width: 0; 
+    /* Start with width 0 and expand to 100% over 0.3 at same time
     transform the line (move) from -8px (below the link) to  final position */
     transform: translateY(-8px); 
     transition: width 0.3s ease, transform 0.3s ease;
@@ -680,12 +723,29 @@ and on top card body section */
     border-bottom: 1.5px solid var(--footer-underline-colour); 
     padding: 5px 0;
 }
+
+.contact-datail-box a , .site-map-mobile-box a{
+    text-decoration: none;
+}
+
+.site-map-mobile-box{
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.decorate-line-footer{
+    background-color: var(--footer-underline-colour);
+    width: 100%;
+    height: 1.5px;
+    display: block;
+}
+
 /* Todo
-1. finish mobile header
-2. align hero section text to with header
-3. fix hero text wrap size
-4. fix hero text spacing between elements
-5. change the garage > icon to font awesome
-6. add sticky sidbar socials
-7. fix here section font weight
-8. Fix hero section spacing between heading on desktop and mobile */
+1. finish mobile header -- DONE
+2. align hero section text to with header -- DONE 
+3. fix hero text wrap size -- DONE 
+4. fix hero text spacing between elements -- DONE
+5. change the garage > icon to font awesome -- DONE
+6. add sticky sidbar socials --  DONE
+7. fix hero section font weight -- DONE
+8. Fix hero section spacing between heading on desktop and mobile -- DONE */
