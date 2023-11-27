@@ -428,7 +428,7 @@ body {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    transition: margin 0.3s ease;
+   /*  transition: margin 0.3s ease; */
 }
 
 /* Adjust extra margin for push down hero section due to fixed header */
