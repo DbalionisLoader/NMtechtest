@@ -424,13 +424,14 @@ body {
     width: 100%; 
     /* Height on the section -  */
     height: 373px; 
-    background-image: url('../images/Hero Image.jpeg'); 
+    background-image: url('images/Hero Image.jpeg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     transition: margin 0.3s ease;
 }
 
+/* Adjust extra margin for push down hero section due to fixed header */
 @media (max-width: 1400px) {
     .hero-wrap{
         margin-top: 125px;
